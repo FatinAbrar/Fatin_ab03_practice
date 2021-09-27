@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutterintroproject/appBar.dart';
-import 'package:flutterintroproject/button.dart';
+import 'package:flutterintroproject/appbarrowcolumn.dart';
+import 'package:flutterintroproject/buttoncolumn.dart';
 import 'package:flutterintroproject/containercolumn.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Practice',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: ButtonColumn(),
+      home: ContainerColumn(),
     );
   }
 }

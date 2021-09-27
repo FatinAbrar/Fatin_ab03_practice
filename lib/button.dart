@@ -1,127 +1,107 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class ButtonColumn extends StatefulWidget {
-  const ButtonColumn({Key key}) : super(key: key);
+class BottonColumn extends StatefulWidget {
+  const BottonColumn({Key key}) : super(key: key);
 
   @override
-  _ButtonColumnState createState() => _ButtonColumnState();
+  _BottonColumnState createState() => _BottonColumnState();
 }
 
-class _ButtonColumnState extends State<ButtonColumn> {
+class _BottonColumnState extends State<BottonColumn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Icons.arrow_back,
-          ),
-        ),
-        title: Center(
-          child: Text(
-            "Practice",
-            style: TextStyle(
-              color: Colors.amber[900],
-              fontSize: 30,
-            ),
-          ),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.close,
-            ),
-          ),
-        ],
-      ),
-      body: Align(
-        child: Container(
-          width: double.infinity,
-          height: double.infinity,
-          decoration: const BoxDecoration(
-            color: Colors.greenAccent,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                height: 250,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Colors.deepPurple[100],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Text("Fatin Abrar"),
-                    Text("Municipal, Khulna"),
-                    Text("student"),
-                  ],
-                ),
+        appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back,
               ),
-              Container(
-                height: 150,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Colors.lightBlue[200],
+              onPressed: () {}),
+          title: Text("Profile Page"),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.close),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body: Align(
+          child: Container(
+            height: 500,
+            width: 300,
+            decoration: BoxDecoration(color: Colors.amberAccent),
+            child: Column(
+              children: [
+                Container(
+                  height: 300,
+                  width: 300,
+                  decoration: BoxDecoration(color: Colors.blueGrey),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Text("Name : Fatin Abrar"),
+                      Text("Address: Municipal"),
+                      Text("Place : Khulna"),
+                      Text("Position: student"),
+                      Text("posting : Northern"),
+                      Text("total Salary : ${10000 + 4000 + 5500 + 678.39}"),
+                    ],
+                  ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    Text("marketing"),
-                    Text("Hrm"),
-                    Text("Flutter"),
-                    Text("Digital Marketer"),
+                Container(
+                  height: 100,
+                  width: 300,
+                  decoration: BoxDecoration(color: Colors.cyanAccent),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text("Marketing"),
+                        Text("HRM"),
+                        Text("Cross-platform"),
+                        Text("Flutter"),
 
-                  ],
+                      ]),
                 ),
-              ),
-              Container(
-                height: 150,
-                width: 300,
-                decoration: BoxDecoration(
-                  color: Colors.lime[200],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Container(
-                        height: 40,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          color: Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Center(
-                          child: Text("Button"),
-                        ),
-                      ),
-                    ),
-                    TextButton(
+                Container(
+                  height: 100,
+                  width: 300,
+                  decoration: BoxDecoration(color: Colors.deepPurple),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      FlatButton(
                         onPressed: () {},
                         child: Container(
-                          height: 40,
-                          width: 100,
+                          height: 25,
+                          width: 60,
                           decoration: BoxDecoration(
-                            color: Colors.white70,
-                            borderRadius: BorderRadius.circular(10),
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Center(
+                            child: Text("Home"),
                           ),
-                          child: const Center(
-                            child: Text("Go to Home"),
-                          ),
-                        ))
-                  ],
+                        ),
+                      ),
+                      FlatButton(
+                          onPressed: () {},
+                          child: Container(
+                            height: 25,
+                            width: 170,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(25),
+                            ),
+                            child: Center(
+                              child: Text("Go to Registration Page"),
+                            ),
+                          )),
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
