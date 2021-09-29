@@ -16,7 +16,7 @@ class _AppbarRowColumnState extends State<AppbarRowColumn> {
         backgroundColor: Colors.transparent,
         leadingWidth: 15,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios_rounded),
+          icon: Icon(Icons.backspace_outlined),
           iconSize: 25,
           onPressed: () {},
         ),
@@ -69,9 +69,90 @@ class _AppbarRowColumnState extends State<AppbarRowColumn> {
               BoxDecoration(color: Colors.grey, shape: BoxShape.circle),
               child: Icon(Icons.person, size: 80),
             ),
-          ]),
+            Row(
+              children: [
+                FlatButton(
+                  onPressed: (){},
+                    child: Container(
+                      height: 40,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        color: Colors.lightBlue
+                      ),
+                      child: Row(
+                    children: [
+                      Icon(Icons.create)
+                    ],
+                    ),
+                )
+        ),
+                FlatButton(
+                  onPressed: (){},
+                    child: Container(
+                      height:50 ,
+                      width: 100,
+                      decoration: BoxDecoration
+                        (borderRadius: BorderRadius.circular(15.5),
+                        color: Colors.amber,
+
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [Icon(Icons.person_add),
+                        Text("Yahoo",
+                        style:TextStyle(
+
+                        ))],
+
+                      ),
+
+                    )
+                  ,
+                )
+  ]
+
+            ),
+          Container(
+            height: 100,
+            width: 250,
+            child: Column(
+              children: [
+                Text("Fatin Abrar",
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.red,
+                  fontSize: 24,
+
+                ),
+                ),
+                Text("Fatin Abrar",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.limeAccent,
+                      fontWeight: FontWeight.w900,
+                      fontStyle: FontStyle.italic,
+
+                    ),
+                ),
+
+                Text("i am fatin, from khulna,student of nubtk.",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    fontStyle: FontStyle.italic,
+                  ),
+
+                )
+              ],
+            ),
+          )
+          ],
+
+
         ),
       ),
-    );
+    ),);
   }
 }
+
